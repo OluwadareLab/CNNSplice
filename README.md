@@ -23,8 +23,8 @@
 **1.	Content of folders:**
 -----------------------------------------------------------	
 * *src*: CNNSplice source code. cnnsplice.py <br />
-* src: cross-validation source code. cnnsplice_cross_val.py<br />
-* src: CNNSplice validation source code. cnnsplice_val.py <br />
+* *src*: cross-validation source code. cnnsplice_cross_val.py<br />
+* *src*: CNNSplice validation source code. cnnsplice_val.py <br />
 * Models file for CNNSplice models <br />
 * Log file for utilization results logs <br />
 * Plots file for utilization results plots <br />
