@@ -35,16 +35,6 @@
 In our research, we utilized five carefully selected datasets from organisms, namely: Homo sapiens, Oryza sativa japonica, Arabidopsis thaliana, Drosophila melanogaster, and Caenorhabditis elegans. We downloaded these reference genomic sequence datasets (FASTA file format) from [Albaradei, S. et al](https://pubmed.ncbi.nlm.nih.gov/32550561/) and its corresponding annotation sequence (GTF file format) from [Ensembl](https://uswest.ensembl.org/index.html). Our data for constructed to permit a 
 **Sequence Length of 400**
 
-Hyper-Parameters	Search Space
-Layers	[1, 2, 3, 4, 5]
-Filter number	[50, 64, 100, 128, 150]
-Filter size	[5, 7, 9, 11]
-Activation function	[sigmoid, relu, softmax, tanh]
-Strides	[1, 3, 5]
-Learning rate	[1e-3, 5e-4, 1e-4, 5e-5, 1e-5]
-Optimizers	[sgd, adam, adagrad, RMSprop, nadam]
-
-
 
 **3.	One-Hot encoding:**
 -----------------------------------------------------------
