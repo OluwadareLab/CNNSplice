@@ -1,7 +1,6 @@
 # CNNSplice
 CNNSplice: Robust Models for Splice Site Prediction Using Deep Convolutional Neural Networks
 
-# CNNSplice: Robust Models for Splice Site Prediction Using Deep Convolutional Neural Networks
 
 **OluwadareLab,**
 **University of Colorado, Colorado Springs**
