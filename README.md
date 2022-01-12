@@ -32,7 +32,7 @@
 
 **2.	Datasets:**
 -----------------------------------------------------------
-In our research, we utilized five carefully selected datasets from organisms, namely: Homo sapiens, Oryza sativa japonica, Arabidopsis thaliana, Drosophila melanogaster, and Caenorhabditis elegans. We downloaded these reference genomic sequence datasets (FASTA file format) from [Albaradei, S. et al](https://pubmed.ncbi.nlm.nih.gov/32550561/) and its corresponding annotation sequence (GTF file format) from [Ensembl](https://uswest.ensembl.org/index.html). Our data for constructed to permit a 
+We constructed a balanced and unbalanced dataset from five carefully selected datasets from organisms namely: *Homo sapiens*, *Oryza sativa japonica*, *Arabidopsis thaliana*, *Drosophila melanogaster*, and *Caenorhabditis elegans*. We downloaded these reference genomic sequence data from [Albaradei, S. et al]*(https://pubmed.ncbi.nlm.nih.gov/32550561/)*. Our algorithms result in independent acceptor and donor models from each downloaded dataset trained. In order to have a comprehensive training set to solve the problem of false positives, we trained CNNSplice on a total of 10000 sequences with the balanced and imbalanced distribution involving ratio 1:1 and 3:1 respectively. Our constructehd dataset permits a 
 **Sequence Length of 400**
 
 
@@ -43,9 +43,15 @@ We mapped genomic nucleotide bases to a collection of binary integer variables i
 We tuned the hyperparameters during learning based on the ranges shown in Table below search space, with the best performing hyperparameters chosen for the model generation. 
 
 
-**4.	Usage:**
+**4.	Robustness Test:**
+-----------------------------------------------------------
+
+For both the acceptor and donor organism datasets, we randomly picked 100 sequences of each organism. Sequence positions 295 to 305 are represented by the magnitude of the genomic sequence characters in the motif. As seen in the figures below, the AG contributes significantly and positively to the acceptor site, while the GT contributes significantly and positively to the donor site. For each of the organism datasets, this can be seen.
+
+
+**5.	Usage:**
 ----------------------------------------------------------- 
-Usage: To use, type in the terminal python deepsplicer.py -n model_name -s sequence(acceptor or donor) -o organism_name -e encoded_sequnce_file -l encoded_label_file <br /> 	
+Usage: To use, type in the terminal python cnnsplice.py -n model_name -s sequence(acceptor or donor) -o organism_name -e encoded_sequnce_file -l encoded_label_file <br /> 	
                           		
                               
 * **Arguments**: <br />	
@@ -69,6 +75,6 @@ Deepsplicer outputs three files:
 **7.	Note:**
 -----------------------------------------------------------
 * Dataset sequence length is 400.
-* Deepsplice folders [log, models, plots] is essential for code functionality.
+* CNNSplice folders [log, models, plots] is essential for code functionality.
 * Genomic sequence input data should should transfomed using one-hot encoding.
 
