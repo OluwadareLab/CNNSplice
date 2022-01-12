@@ -36,10 +36,11 @@ In our research, we utilized five carefully selected datasets from organisms, na
 **Sequence Length of 400**
 
 
-**3.	One-Hot encoding:**
+**3.	One-Hot encoding and Hyper-parameter tuning:**
 -----------------------------------------------------------
 
-We used One-hot encoding to transforms our Genomic sequence data and labels into vectors of 0 and 1. In other words, each element in the vector will be 0, except the element that corresponds to the nucleotide base of the sequence data input is 1. Adenine (A) is [1 0 0 0], Cytosine (C) is [0 1 0 0], Guanine (G) is [0 0 1 0], Thymine (T) is [0 0 0 1].
+We mapped genomic nucleotide bases to a collection of binary integer variables in this experiment. Adenine (A) is represented by [1 0 0], Cytosine (C) is represented by [0 1 0 0], Guanine (G) is represented by [0 0 1 0], and Thymine (T) is represented by [0 0 0 1], with 1 denoting the location of each nucleotide in the vector set. As a result, we feed the CNN architecture a N X 4 input matrix, with N denoting the length of the genomic sequence and 4 denoting the nucleotides (A, C, G, T).
+We tuned the hyperparameters during learning based on the ranges shown in Table below search space, with the best performing hyperparameters chosen for the model generation. 
 
 
 **4.	Usage:**
