@@ -28,8 +28,7 @@ Post-transcriptional splicing of ribonucleic acid (mRNA) required for gene annot
 <p align="center"><img src="images/splicesite.jpg" width="45%" height="45%"></p>
 <br />
 In this research work, we trained and tested a range of deep learning models, based on deep Convolutional Neural Networks (CNNs), for splice prediction using a 5-fold cross-validation test; and we chose the most consistent and high-performing models across different organisms for splice site prediction in balanced and imbalanced datasets. Thus, we call these robust Deep learning models CNNSplice.
-
-<br />
+<br /><br />
 **Page folder content**
 * *src*: CNNSplice source code. cnnsplice.py <br />
 * *src*: CNNSplice cross-validation source code. cnnsplice_cross_val.py<br />
