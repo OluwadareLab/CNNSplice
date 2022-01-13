@@ -20,8 +20,16 @@
     
 --------------------------------------------------------------------	
 
-**1.	Content of folders:**
+**1.	Introduction:**
 -----------------------------------------------------------	
+
+Post-transcriptional splicing of ribonucleic acid (mRNA) required for gene annotation, comprises eliminating regions of RNA sequences (Introns) that do not carry the necessary information for gene expression. Splice sites (SS) are regions or boundaries of an RNA sequence located in the 5′ and 3′ directions of the Introns. The spliceosome enzyme eliminates these portions as they do not contain information essential for gene expression. 
+<br>
+
+<br>
+In this research work, we trained and tested a range of deep learning models, based on deep Convolutional Neural Networks (CNNs), for splice prediction using a 5-fold cross-validation test; and we chose the most consistent and high-performing models across different organisms for splice site prediction in balanced and imbalanced datasets. Thus, we call these robust Deep learning models CNNSplice. 
+
+**Page folder content**
 * *src*: CNNSplice source code. cnnsplice.py <br />
 * *src*: CNNSplice cross-validation source code. cnnsplice_cross_val.py<br />
 * *src*: CNNSplice validation source code. cnnsplice_val.py <br />
