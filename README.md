@@ -43,13 +43,18 @@ We mapped genomic nucleotide bases to a collection of binary integer variables i
 We tuned the hyperparameters during learning based on the ranges shown in Table below search space, with the best performing hyperparameters chosen for the model generation. 
 
 
-**4.	Robustness Test:**
+**4.	Cross Validation:**
+-----------------------------------------------------------
+
+CNNSplice splits the training dataset into 5-folds using k-fold cross-validation with the StratifiedKFold Machine Learning module (Du et al., 2018). We reconstructed the cross-validation datasets from the source datasets (Albaradei et al., 2020); 75% of this dataset’s distribution was used as a training set for the 5-fold cross-validation and 25% was used as the test dataset, which was untouched during the training phase. The Log file folder contains the result of the cross-validation experiments.
+
+**5.	Robustness Test:**
 -----------------------------------------------------------
 
 For both the acceptor and donor organism datasets, we randomly picked 100 sequences of each organism. Sequence positions 295 to 305 are represented by the magnitude of the genomic sequence characters in the motif. As seen in the figures below, the AG contributes significantly and positively to the acceptor site, while the GT contributes significantly and positively to the donor site. For each of the organism datasets, this can be seen.
 
 
-**5.	Usage:**
+**6.	Usage:**
 ----------------------------------------------------------- 
 Usage: To use, type in the terminal python cnnsplice.py -n model_name -s sequence(acceptor or donor) -o organism_name -e encoded_sequnce_file -l encoded_label_file <br /> 	
                           		
@@ -63,7 +68,7 @@ Usage: To use, type in the terminal python cnnsplice.py -n model_name -s sequenc
 
 
 
-**6.	Output:**
+**7.	Output:**
 -----------------------------------------------------------
 Deepsplicer outputs three files: 
 
@@ -72,7 +77,7 @@ Deepsplicer outputs three files:
 3. png: contains the plotting of the prediction accuracy
 
 
-**7.	Note:**
+**8.	Note:**
 -----------------------------------------------------------
 * Dataset sequence length is 400.
 * CNNSplice folders [log, models, plots] is essential for code functionality.
