@@ -52,6 +52,7 @@ CNNSplice splits the training dataset into 5-folds using k-fold cross-validation
 -----------------------------------------------------------
 
 For both the acceptor and donor organism datasets, we randomly picked 100 sequences of each organism. Sequence positions 295 to 305 are represented by the magnitude of the genomic sequence characters in the motif. As seen in the figures below, the AG contributes significantly and positively to the acceptor site, while the GT contributes significantly and positively to the donor site. For each of the organism datasets, this can be seen.
+<p><img src="images/robusness_acceptor.png"> <img src="images/robusness_donor.png"></p>
 
 
 **6.	Usage:**
