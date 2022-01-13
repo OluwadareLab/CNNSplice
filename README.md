@@ -50,7 +50,7 @@ We constructed a balanced and unbalanced dataset from five carefully selected da
 
 We mapped genomic nucleotide bases to a collection of binary integer variables in this experiment. Adenine (A) is represented by [1 0 0], Cytosine (C) is represented by [0 1 0 0], Guanine (G) is represented by [0 0 1 0], and Thymine (T) is represented by [0 0 0 1], with 1 denoting the location of each nucleotide in the vector set. As a result, we feed the CNN architecture a N X 4 input matrix, with N denoting the length of the genomic sequence and 4 denoting the nucleotides (A, C, G, T).
 We tuned the hyperparameters during learning based on the ranges shown in Table below search space, with the best performing hyperparameters chosen for the model generation. The figure below shows the architectural pipeline summary.
-<p align="center"><img src="images/architecture.jpg" width="45%" height="45%"></p>
+<p align="center"><img src="images/architecture.jpg" width="50%" height="50%"></p>
 
 
 **4.	Cross Validation:**
