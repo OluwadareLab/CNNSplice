@@ -46,7 +46,7 @@ We tuned the hyperparameters during learning based on the ranges shown in Table 
 **4.	Cross Validation:**
 -----------------------------------------------------------
 
-CNNSplice splits the training dataset into 5-folds using k-fold cross-validation with the StratifiedKFold Machine Learning module *[Du et al., 2018]*. We reconstructed the cross-validation datasets from the source datasets [Albaradei, S. et al]*(https://pubmed.ncbi.nlm.nih.gov/32550561/)*; 75% of this dataset’s distribution was used as a training set for the 5-fold cross-validation and 25% was used as the test dataset, which was untouched during the training phase. The Log file folder contains the result of the cross-validation experiments.
+CNNSplice splits the training dataset into 5-folds using k-fold cross-validation with the StratifiedKFold Machine Learning module [Du et al., 2018]. We reconstructed the cross-validation datasets from the source datasets [Albaradei, S. et al]*(https://pubmed.ncbi.nlm.nih.gov/32550561/)*; 75% of this dataset’s distribution was used as a training set for the 5-fold cross-validation and 25% was used as the test dataset, which was untouched during the training phase. The Log file folder contains the result of the cross-validation experiments.
 
 **5.	Robustness Test:**
 -----------------------------------------------------------
