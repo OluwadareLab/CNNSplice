@@ -24,11 +24,12 @@
 -----------------------------------------------------------	
 
 Post-transcriptional splicing of ribonucleic acid (mRNA) required for gene annotation, comprises eliminating regions of RNA sequences (Introns) that do not carry the necessary information for gene expression. Splice sites (SS) are regions or boundaries of an RNA sequence located in the 5′ and 3′ directions of the Introns. The spliceosome enzyme eliminates these portions as they do not contain information essential for gene expression. 
-<br>
+<br />
+<p align="center"><img src="images/splicesite.jpg" width="45%" height="45%"></p>
+<br />
+In this research work, we trained and tested a range of deep learning models, based on deep Convolutional Neural Networks (CNNs), for splice prediction using a 5-fold cross-validation test; and we chose the most consistent and high-performing models across different organisms for splice site prediction in balanced and imbalanced datasets. Thus, we call these robust Deep learning models CNNSplice.
 
-<br>
-In this research work, we trained and tested a range of deep learning models, based on deep Convolutional Neural Networks (CNNs), for splice prediction using a 5-fold cross-validation test; and we chose the most consistent and high-performing models across different organisms for splice site prediction in balanced and imbalanced datasets. Thus, we call these robust Deep learning models CNNSplice. 
-
+<br />
 **Page folder content**
 * *src*: CNNSplice source code. cnnsplice.py <br />
 * *src*: CNNSplice cross-validation source code. cnnsplice_cross_val.py<br />
@@ -48,13 +49,15 @@ We constructed a balanced and unbalanced dataset from five carefully selected da
 -----------------------------------------------------------
 
 We mapped genomic nucleotide bases to a collection of binary integer variables in this experiment. Adenine (A) is represented by [1 0 0], Cytosine (C) is represented by [0 1 0 0], Guanine (G) is represented by [0 0 1 0], and Thymine (T) is represented by [0 0 0 1], with 1 denoting the location of each nucleotide in the vector set. As a result, we feed the CNN architecture a N X 4 input matrix, with N denoting the length of the genomic sequence and 4 denoting the nucleotides (A, C, G, T).
-We tuned the hyperparameters during learning based on the ranges shown in Table below search space, with the best performing hyperparameters chosen for the model generation. 
+We tuned the hyperparameters during learning based on the ranges shown in Table below search space, with the best performing hyperparameters chosen for the model generation. The figure below shows the architectural pipeline summary.
+<p align="center"><img src="images/architecture.jpg" width="45%" height="45%"></p>
 
 
 **4.	Cross Validation:**
 -----------------------------------------------------------
 
-CNNSplice splits the training dataset into 5-folds using k-fold cross-validation with the StratifiedKFold Machine Learning module. We reconstructed the cross-validation datasets from the source datasets [Albaradei, S. et al]*(https://pubmed.ncbi.nlm.nih.gov/32550561/)*; 75% of this dataset’s distribution was used as a training set for the 5-fold cross-validation and 25% was used as the test dataset, which was untouched during the training phase. The Log file folder contains the result of the cross-validation experiments.
+CNNSplice splits the training dataset into 5-folds using k-fold cross-validation with the StratifiedKFold Machine Learning module. We reconstructed the cross-validation datasets from the source datasets [Albaradei, S. et al]*(https://pubmed.ncbi.nlm.nih.gov/32550561/)*; 75% of this dataset’s distribution was used as a training set for the 5-fold cross-validation and 25% was used as the test dataset, which was untouched during the training phase. The Log file folder contains the result of the cross-validation experiments. The result of the cross-validation is a set of models for which the figure below shows the deep learning layer architecture.
+<p align="center"><img src="images/model.jpg" width="45%" height="45%"></p>
 
 **5.	Robustness Test:**
 -----------------------------------------------------------
