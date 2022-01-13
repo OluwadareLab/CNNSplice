@@ -92,6 +92,5 @@ Deepsplicer outputs three files:
 **8.	Note:**
 -----------------------------------------------------------
 * Dataset sequence length is 400.
-* CNNSplice folders [log, models, plots] is essential for code functionality.
 * Genomic sequence input data should should transfomed using one-hot encoding.
 
