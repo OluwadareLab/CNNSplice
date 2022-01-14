@@ -31,9 +31,9 @@ In this research work, we trained and tested a range of deep learning models, ba
 
 <br /><br />
 **Page folder content**
-* *src*: CNNSplice source code. cnnsplice.py <br />
-* *src*: CNNSplice cross-validation source code. cnnsplice_cross_val.py<br />
-* *src*: CNNSplice robustness test source code. cnnsplice_val.py <br />
+* CNNSplice source code: cnnsplice.py <br />
+* CNNSplice cross-validation source code: cnnsplice_cross_val.py<br />
+* CNNSplice robustness test source code: cnnsplice_val.py <br />
 * *models*: Models file for CNNSplice models <br />
 * *log*: Log file for suppplementary file containing results tables <br />
 * *images*: Image file for results plots and figures <br />
