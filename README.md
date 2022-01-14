@@ -36,7 +36,7 @@ In this research work, we trained and tested a range of deep learning models, ba
 * *src*: CNNSplice robustness test source code. cnnsplice_val.py <br />
 * *models*: Models file for CNNSplice models <br />
 * *log*: Log file for suppplementary file containing results tables <br />
-* *image*: Image file for results plots and figures <br />
+* *images*: Image file for results plots and figures <br />
 
 
 **2.	Datasets:**
