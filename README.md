@@ -35,8 +35,8 @@ In this research work, we trained and tested a range of deep learning models, ba
 * *src*: CNNSplice cross-validation source code. cnnsplice_cross_val.py<br />
 * *src*: CNNSplice validation source code. cnnsplice_val.py <br />
 * Models file for CNNSplice models <br />
-* Log file for Results logs and tables <br />
-* Plots file for Results plots and figures <br />
+* Log file for suppplementary file containing results tables <br />
+* Image file for results plots and figures <br />
 
 
 **2.	Datasets:**
