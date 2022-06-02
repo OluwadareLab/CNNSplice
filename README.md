@@ -36,7 +36,7 @@ Exciting! You can now access CNNSplice locally.
 
 **2.	Dependencies:**
 -----------------------------------------------------------
-CNNSplice is developed in <i>Python3 </i>. All dependencies are included in the Docker environment. We have attached the requirementfile for the list of dependencies. For local install of dependencies from the <i>requirement.txt</i> file, use command `pip install -r requirement.txt` from the current working directory.
+CNNSplice is developed in <i>Python3</i>. All dependencies are included in the Docker environment. We have attached the requirement file for the list of dependencies. For local install of dependencies from the <i>requirement.txt</i> file for virtual environment usage, use command `pip install -r requirement.txt` from the current working directory.
 Our constructed dataset permits a **Sequence Length of 400**
 
 
