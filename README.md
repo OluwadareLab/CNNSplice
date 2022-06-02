@@ -40,9 +40,9 @@ CNNSplice is developed in <i>Python3</i>. All dependencies are included in the D
 Our constructed dataset permits a **Sequence Length of 400**
 
 
-**3.	Usage:**
+**3.	Direcrtory and Usage:**
 ----------------------------------------------------------- 
-Usage: To use, type in the terminal python cnnsplice.py -n model_name -s sequence(acceptor or donor) -o organism_name -e encoded_sequnce_file -l encoded_label_file <br /> 	
+Usage: To use, type in the terminal `python cnnsplice.py -n model_name -m mode("balanced" or "imbalanced") -e encoded_sequnce_file -l encoded_label_file` <br /> 	
                           		
                               
 * **Arguments**: <br />	
@@ -66,5 +66,6 @@ Deepsplicer outputs three files:
 **5.	Note:**
 -----------------------------------------------------------
 * Dataset sequence length is 400.
+* Ensure you have a log folder for text file storage
 * Genomic sequence input data should be transfomed using one-hot encoding.
 
