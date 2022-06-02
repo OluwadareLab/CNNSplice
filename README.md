@@ -34,9 +34,9 @@ To install and build TADMaster follow these steps.
 Exciting! You can now access CNNSplice locally.
 
 
-**2.	Datasets:**
+**2.	Dependencies:**
 -----------------------------------------------------------
-We constructed a balanced and unbalanced dataset from five carefully selected datasets from organisms namely: *Homo sapiens*, *Oryza sativa japonica*, *Arabidopsis thaliana*, *Drosophila melanogaster*, and *Caenorhabditis elegans*. We downloaded these reference genomic sequence data from [Albaradei, S. et al]*(https://pubmed.ncbi.nlm.nih.gov/32550561/)*. Our algorithms result in independent acceptor and donor models from each downloaded dataset trained. In order to have a comprehensive training dataset, we trained CNNSplice on a total of 10000 sequences with the balanced and imbalanced distribution involving ratio 1:1 and 3:1 respectively. Our constructed dataset permits a 
+Our constructed dataset permits a 
 **Sequence Length of 400**
 
 
