@@ -20,23 +20,18 @@
     
 --------------------------------------------------------------------	
 
-**1.	Introduction:**
+**1.	Build Instruction:**
 -----------------------------------------------------------	
 
-Post-transcriptional splicing of ribonucleic acid (mRNA) required for gene annotation, comprises eliminating regions of RNA sequences (Introns) that do not carry the necessary information for gene expression. Splice sites (SS) are regions or boundaries of an RNA sequence located in the 5′ and 3′ directions of the Introns. The spliceosome enzyme eliminates these portions as they do not contain information essential for gene expression. 
-<br />
-<p align="center"><img src="images/splicesite.jpg" width="45%" height="45%"></p>
-<br />
-In this research work, we trained and tested a range of deep learning models, based on deep Convolutional Neural Networks (CNNs), for splice prediction using a 5-fold cross-validation test; and we chose the most consistent and high-performing models across different organisms for splice site prediction in balanced and imbalanced datasets. Thus, we call these robust Deep learning models CNNSplice.
+CNNSplice can be run in a Docker-containerized environment locally on users computer. Before cloning this repository and attempting to build, the [Docker engine](https://docs.docker.com/engine/install/), If you are new to docker [here is a quick docker tutorial for beginners](https://docker-curriculum.com/). <br> 
+To install and build TADMaster follow these steps.
 
-<br /><br />
-**Page folder content**
-* *CNNSplice source code*: cnnsplice.py <br />
-* *CNNSplice cross-validation source code*: cnnsplice_cross_val.py<br />
-* *CNNSplice robustness test source code*: cnnsplice_val.py <br />
-* *models*: Models file for CNNSplice models <br />
-* *log*: Log file for suppplementary file containing results tables <br />
-* *images*: Image file for results plots and figures <br />
+1. Clone this repository locally using the command `git clone https://github.com/OluwadareLab/CNNSplice.git`.
+2. Pull the TADMaster docker image from docker hub using the command `docker pull oluwadarelab/cnnsplice:latest`. This may take a few minutes. Once finished, check that the image was sucessfully pulled using `docker image ls`.
+3. Run the CNNSplice container and mount the present working directory to the container using `docker run -v ${PWD}:${PWD}  -p 8050:8050 -it oluwadarelab/CNNSplice`.
+4. `cd` to your file directory.
+
+Exciting! You can now access CNNSplice locally.
 
 
 **2.	Datasets:**
@@ -73,10 +68,10 @@ Usage: To use, type in the terminal python cnnsplice.py -n model_name -s sequenc
                               
 * **Arguments**: <br />	
 	* model_name: A string for the name of the model <br />
-	* sequence: A string to specify acceptor or donor input dataset<br />
-	* organism: A string to specify organism name i.e ["hs", "at", "oriza", "d_mel", "c_elegans"] <br />
-	* encoded sequence file: A file containing the encoded sequence data <br />
-	* encoded label file: A file containing the encoded label data <br />
+	* mode: A string to specify balanaced or imbalanced input dataset<br />
+	* organism: A optional argument string to specify organism name i.e ["hs", "at", "oriza", "d_mel", "c_elegans"] <br />
+	* encoded sequence file: A optional argument file containing the encoded sequence data <br />
+	* encoded label file: A optional argument file containing the encoded label data <br />
 
 
 
