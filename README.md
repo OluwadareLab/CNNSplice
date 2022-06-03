@@ -37,23 +37,19 @@ Exciting! You can now access CNNSplice locally.
 **2.	Dependencies:**
 -----------------------------------------------------------
 CNNSplice is developed in <i>Python3</i>. All dependencies are included in the Docker environment. We have attached the requirement file for the list of dependencies. For local install of dependencies from the <i>requirement.txt</i> file for virtual environment usage, use command `pip install -r requirement.txt` from the current working directory.
-*`%tensorflow_version 1.x  -- this is to backdate the tensorflow version`, This is required for the model intepretability test.
+For model intepretability test, *`%tensorflow_version 1.x  -- this is to backdate the tensorflow version`, 
 Our constructed dataset permits a **Sequence Length of 400**
 
 
 **3.	Directory and Usage:**
 ----------------------------------------------------------- 
-Usage: To use, type in the terminal `python cnnsplice.py -n model_name -m mode("balanced" or "imbalanced") -e encoded_sequnce_file -l encoded_label_file` <br /> 	
+Usage: To use, type in the terminal `python cnnsplice.py -n model_name -m mode("balanced" or "imbalanced") ` <br /> 	
                           		
                               
 * **Arguments**: <br />	
 	* model_name: A string for the name of the model <br />
 	* mode: A string to specify balanaced or imbalanced input dataset<br />
-	* organism: A optional argument string to specify organism name i.e ["hs", "at", "oriza", "d_mel", "c_elegans"] <br />
-	* encoded sequence file: A optional argument file containing the encoded sequence data <br />
-	* encoded label file: A optional argument file containing the encoded label data <br />
-
-
+	
 
 **4.	Output:**
 -----------------------------------------------------------
