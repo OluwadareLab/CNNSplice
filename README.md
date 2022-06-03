@@ -47,8 +47,8 @@ Usage: To use, type in the terminal `python main.py -n model_name -m mode("balan
                           		
                               
 * **Arguments**: <br />	
-	* model_name: A string for the name of the model <br />
-	* mode: A string to specify balanaced or imbalanced input dataset<br />
+	* model_name: A string to specify the name of the model <br />
+	* mode: A string to specify either balanced or imbalanced input dataset<br />
 	
 
 **4.	Output:**
