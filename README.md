@@ -43,7 +43,7 @@ Our constructed dataset permits a **Sequence Length of 400**
 
 **3.	Directory and Usage:**
 ----------------------------------------------------------- 
-Usage: To use, type in the terminal `python cnnsplice.py -n model_name -m mode("balanced" or "imbalanced") ` <br /> 	
+Usage: To use, type in the terminal `python main.py -n model_name -m mode("balanced" or "imbalanced") ` <br /> 	
                           		
                               
 * **Arguments**: <br />	
