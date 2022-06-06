@@ -37,7 +37,7 @@ Exciting! You can now access CNNSplice locally.
 **2.	Dependencies:**
 -----------------------------------------------------------
 CNNSplice is developed in <i>Python3</i>. All dependencies are included in the Docker environment. We have attached the requirement file for the list of dependencies. For local install of dependencies from the <i>requirement.txt</i> file for virtual environment usage, use command `pip install -r requirement.txt` from the current working directory.
-For model intepretability test, *`%tensorflow_version 1.x  -- this is to backdate the tensorflow version`, 
+For model intepretability test, it is essential to use the command *`%tensorflow_version 1.x  -- this is to backdate the tensorflow version`, 
 Our constructed dataset permits a **Sequence Length of 400**
 
 
