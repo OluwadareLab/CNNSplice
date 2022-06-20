@@ -31,9 +31,9 @@ import argparse
 
 
 
-def load_data(datatype, seq):
-	y_test = np.loadtxt(f'./data/test/{datatype}/test_{seq}_{datatype}_lbl')
-	x_test = np.loadtxt(f'./data/test/{datatype}/test_{seq}_{datatype}')
+def load_data(mode, datatype, seq):
+	y_test = np.loadtxt(f'./data/{mode}/{datatype}/test_{seq}_{datatype}_lbl')
+	x_test = np.loadtxt(f'./data/{mode}/{datatype}/test_{seq}_{datatype}')
 
 	x_test = x_test.reshape(-1,400, 4)
 	y_true = y_test
@@ -73,14 +73,14 @@ def testing_process(x_test, y_test, seq, seq_name, name, datatype =""):
 
 
 
-def main(name):
+def main(name, mode):
 
 	seq = "acc"
 	seq_name = "acceptor"
 	list_name = ["hs", "at", "oriza", "d_mel", "c_elegans"]
 
 	for datatype in list_name:
-		x_test,y_test = load_data(datatype, seq_name)
+		x_test,y_test = load_data(mode, datatype, seq_name)
 		testing_process(x_test,y_test, seq, seq_name, name, datatype=datatype)
 
 	print("======================")
@@ -93,7 +93,7 @@ def main(name):
 	seq = "don"
 	seq_name = "donor"
 	for datatype in list_name:
-		x_test,y_test = load_data(datatype, seq_name)
+		x_test,y_test = load_data(mode, datatype, seq_name)
 		testing_process(x_test,y_test, seq, seq_name, name, datatype=datatype)
 
 
@@ -112,7 +112,7 @@ def app_init():
 	mode = args.mode
 
 
-	main(name)
+	main(name, mode)
 
 
 
