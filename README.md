@@ -48,7 +48,7 @@ For Example: `python train.py -n "output_name" -m "balanced" <br />
 * **Arguments**: <br />	
 	* output_name: A user specified string for output naming convention <br />
 	* mode: A string to specify either balanced or imbalanced input dataset, i.e ("balanced" or "imbalanced")<br />
-<br />
+
 * **Outputs**: <br />
 The outputs of training includes: 
 
@@ -63,7 +63,7 @@ For Example: `python test.py -n "output_name" -m "balanced" <br />
 * **Arguments**: <br />	
 	* output_name: A user specified string for output naming convention <br />
 	* mode: A string to specify either balanced or imbalanced input dataset, i.e ("balanced" or "imbalanced")<br />
-<br />
+
 * **Outputs**: <br />
 The outputs of testing includes: 
 
