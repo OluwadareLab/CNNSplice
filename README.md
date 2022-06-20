@@ -52,8 +52,8 @@ For Example: `python train.py -n "output_name" -m "balanced" <br />
 * **Outputs**: <br />
 The outputs of training includes: 
 
-1. .h5: The deepslicer model file.
-2. .txt: A log file that contains the accuracy and evaluation metrics results.	
+* .h5: The deepslicer model file.
+* .txt: A log file that contains the accuracy and evaluation metrics results.	
                           		
                            
 **4.	Usage (Testing):**
@@ -67,7 +67,7 @@ For Example: `python test.py -n "output_name" -m "balanced" <br />
 * **Outputs**: <br />
 The outputs of testing includes: 
 
-1. .txt: A log file that contains the accuracy and evaluation metrics results.
+* .txt: A log file that contains the accuracy and evaluation metrics results.
 
 
 **5.	Note:**
