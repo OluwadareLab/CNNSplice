@@ -51,8 +51,11 @@ def load_data(datatype, seq, mode):
 	# labels = np.loadtxt(f'./processed_data/{datatype}/train_{seq}_{datatype}_lbl')
 	# encoded_seq = np.loadtxt(f'./processed_data/{datatype}/train_{seq}_{datatype}')
 
-	encoded_seq = np.loadtxt(f'./data/{mode}/{datatype}/all_{seq}_{datatype}')
-	labels = np.loadtxt(f'./data/{mode}/{datatype}/all_{seq}_{datatype}_lbl')
+	#encoded_seq = np.loadtxt(f'./data/{mode}/{datatype}/all_{seq}_{datatype}')
+	#labels = np.loadtxt(f'./data/{mode}/{datatype}/all_{seq}_{datatype}_lbl')
+	
+	encoded_seq = np.loadtxt(f'./data/{mode}/{datatype}/train_{seq}_{datatype}')
+	labels = np.loadtxt(f'./data/{mode}/{datatype}/train_{seq}_{datatype}_lbl')
 	
 	encoded_seq_choose = encoded_seq[:, ((400-Length)*2):(1600-(400-Length)*2)]
 
