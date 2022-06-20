@@ -41,24 +41,33 @@ CNNSplice is developed in <i>Python3</i>. All dependencies are included in the D
 * Our constructed dataset permits a **Sequence Length of 400**
 
 
-**3.	Directory and Usage:**
+**3.	Usage (Training):**
 ----------------------------------------------------------- 
-Usage: To train, type in the terminal `python main.py -n "model_name" -m mode("balanced" or "imbalanced") ` <br />
-For Testing, use `python test.py -n "model_name" -m mode("balanced" or "imbalanced") ` 	
-                          		
-                              
+Usage: To train, type in the terminal `python main.py -n "model_name" -m mode ` <br />
+For Example: `python train.py -n "output_name" -m "balanced" <br />
 * **Arguments**: <br />	
-	* model_name: A string to specify a unique name of the model <br />
-	* mode: A string to specify either balanced or imbalanced input dataset<br />
-	
+	* output_name: A user specified string for output naming convention <br />
+	* mode: A string to specify either balanced or imbalanced input dataset, i.e ("balanced" or "imbalanced")<br />
+<br />
+* **Outputs**: <br />
+The outputs of training includes: 
 
-**4.	Output:**
+1. .h5: The deepslicer model file.
+2. .txt: A log file that contains the accuracy and evaluation metrics results.	
+                          		
+                           
+**4.	Usage (Testing):**
 -----------------------------------------------------------
-Deepsplicer outputs three files: 
+For Testing, use `python test.py -n "output_name" -m mode("balanced" or "imbalanced") `
+For Example: `python test.py -n "output_name" -m "balanced" <br />
+* **Arguments**: <br />	
+	* output_name: A user specified string for output naming convention <br />
+	* mode: A string to specify either balanced or imbalanced input dataset, i.e ("balanced" or "imbalanced")<br />
+<br />
+* **Outputs**: <br />
+The outputs of testing includes: 
 
-1. .h5: The deepslicer model and weight file.
-2. .txt: A log file that contains the accuracy and evaluation metrics results.
-3. png: contains the plotting of the prediction accuracy
+1. .txt: A log file that contains the accuracy and evaluation metrics results.
 
 
 **5.	Note:**
