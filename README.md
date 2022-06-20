@@ -71,6 +71,6 @@ The outputs of testing includes: <br />
 **5.	Note:**
 -----------------------------------------------------------
 * Dataset sequence length is 400.
-* Ensure you have a log folder for text file storage
+* Ensure you have a log directory for text file storage
 * Genomic sequence input data should be transfomed using one-hot encoding.
 
