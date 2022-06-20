@@ -58,7 +58,7 @@ The outputs of training includes:
                            
 **4.	Usage (Testing):**
 -----------------------------------------------------------
-For Testing, use `python test.py -n "output_name" -m mode("balanced" or "imbalanced") `
+For Testing, use `python test.py -n "output_name" -m mode("balanced" or "imbalanced") ` <br />
 For Example: `python test.py -n "output_name" -m "balanced" <br />
 * **Arguments**: <br />	
 	* output_name: A user specified string for output naming convention <br />
