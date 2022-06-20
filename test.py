@@ -32,8 +32,8 @@ import argparse
 
 
 def load_data(datatype, seq):
-	y_test = np.loadtxt(f'./processed_data/{datatype}/test_{seq}_{datatype}_lbl')
-	x_test = np.loadtxt(f'./processed_data/{datatype}/test_{seq}_{datatype}')
+	y_test = np.loadtxt(f'./data/test/{datatype}/test_{seq}_{datatype}_lbl')
+	x_test = np.loadtxt(f'./data/test/{datatype}/test_{seq}_{datatype}')
 
 	x_test = x_test.reshape(-1,400, 4)
 	y_true = y_test
@@ -68,7 +68,7 @@ def testing_process(x_test, y_test, seq, seq_name, name, datatype =""):
 	data_metrics = {"auc_score": auc, "precision": macro_precision, "recall": macro_recall, "f1": macro_f1, "class_accuracy": class_accuracy, "accuracy": accuracy}
 	print(data_metrics)
 
-	with open(f'./logs/ltest_file_metrics_{datatype}.txt', 'w') as fl:
+	with open(f'./logs/test_logfile_metrics_{datatype}.txt', 'w') as fl:
 		fl.write(str(data_metrics))
 
 
@@ -105,18 +105,12 @@ def app_init():
 	parser = argparse.ArgumentParser()
 	parser.add_argument("-n", "--name", type=str, required=True, help="name of convolutional model")
 	parser.add_argument("-m", "--mode", type=str, required=True, help="balanced or imbalanced")
-	# parser.add_argument("-o", "--organism", type=str, required=True, help="dataset organism")
-	#parser.add_argument("-g", "--encoded_seq", str=str, metavar='FILE', required=False, help="one-hot encoded genome sequence data file")
-# 	parser.add_argument("-l", "--label", str=str, metavar='FILE', required=False, help="encoded label data")
 
 
 	args = parser.parse_args()
 	name = args.name
 	mode = args.mode
-# 	if args.encoded_seq:
-# 		file_encoded_seq = args.encoded_seq
-# 	if args.file_label: 
-# 		file_label = args.label
+
 
 	main(name)
 
