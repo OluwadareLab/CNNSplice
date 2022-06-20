@@ -41,9 +41,9 @@ def load_data(datatype, seq):
 	return x_test, y_test
 
 
-def testing_process(x_test, y_test, seq, name, datatype =""):
+def testing_process(x_test, y_test, seq, seq_name, name, datatype =""):
 
-	model = load_model(f'./models/CNN_{seq}_{name}_{datatype}.h5')
+	model = load_model(f'./models/{seq_name}_cnnsplice_{datatype}.h5')
 	start_time = time.time()
 	print(model.summary())
 	loss,accuracy = model.evaluate(x_test,y_test)
@@ -80,7 +80,7 @@ def main(name):
 
 	for datatype in list_name:
 		x_test,y_test = load_data(datatype, seq_name)
-		testing_process(x_test,y_test, seq, name, datatype=datatype)
+		testing_process(x_test,y_test, seq, seq_name, name, datatype=datatype)
 
 	print("======================")
 	print("======================")
@@ -93,7 +93,7 @@ def main(name):
 	seq_name = "donor"
 	for datatype in list_name:
 		x_test,y_test = load_data(datatype, seq_name)
-		testing_process(x_test,y_test, seq, name, datatype=datatype)
+		testing_process(x_test,y_test, seq, seq_name, name, datatype=datatype)
 
 
 
