@@ -50,10 +50,9 @@ For Example: `python train.py -n "output_name" -m "balanced" ` <br />
 	* mode: A string to specify either balanced or imbalanced input dataset, i.e ("balanced" or "imbalanced")<br />
 
 * **Outputs**: <br />
-The outputs of training includes: 
-
-* .h5: The deepslicer model file.
-* .txt: A log file that contains the accuracy and evaluation metrics results.	
+The outputs of training includes: <br />
+	* .h5: The deepslicer model file.
+	* .txt: A log file that contains the accuracy and evaluation metrics results.	
                           		
                            
 **4.	Usage (Testing):**
@@ -65,9 +64,8 @@ For Example: `python test.py -n "output_name" -m "balanced" ` <br />
 	* mode: A string to specify either balanced or imbalanced input dataset, i.e ("balanced" or "imbalanced")<br />
 
 * **Outputs**: <br />
-The outputs of testing includes: 
-
-* .txt: A log file that contains the accuracy and evaluation metrics results.
+The outputs of testing includes: <br />
+	* .txt: A log file that contains the accuracy and evaluation metrics results.
 
 
 **5.	Note:**
