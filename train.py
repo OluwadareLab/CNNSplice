@@ -150,7 +150,7 @@ def cnn_classifier():
 
 
 
-def training_process(x_train,y_train,x_test,y_test, datatype=''):
+def training_process(x_train,y_train,x_test,y_test, seq, dataorg, datatype=''):
 	x_train = x_train.reshape(-1, Length, 4)
 	y_train = to_categorical(y_train, num_classes=2)
 	x_test = x_test.reshape(-1, Length, 4)
@@ -169,22 +169,13 @@ def training_process(x_train,y_train,x_test,y_test, datatype=''):
 
 
 	loss,accuracy = model.evaluate(x_test,y_test)
-	model_data = model.save(f'./models/CNN_{accuracy}_{datatype}.h5')
+	model_data = model.save(f'./models/{seq}_cnnsplice_{dataorg}.h5')
 	print(model.summary())
-	# keras.utils.plot_model(model, f"./plots/model_summary_{datatype}.png", show_shapes=True)
 
 
 	print('testing accuracy_{}: {}'.format(datatype, accuracy))
 	print('testing loss_{}: {}'.format(datatype, loss))
 	print('training took %fs'%(time.time()-start_time))
-
-
-	# plt.plot(history.history['accuracy'])
-	# plt.title('model accuracy')
-	# plt.ylabel('loss')
-	# plt.xlabel('epoch')
-	# plt.legend(['test'], loc='upper left')
-	# plt.savefig(f"./plots/accuracy_{datatype}.png")
 
 
 	prob = model.predict(x_test)
@@ -216,9 +207,9 @@ def main(name, mode):
 	name = f"_{name}_"
 	list_name = ["hs", "at", "oriza", "d_mel", "c_elegans"]
 
-	for datatype in list_name:
-		x_train,y_train,x_test,y_test = load_data(datatype, seq, mode)
-		training_process(x_train,y_train,x_test,y_test, datatype=seq+name+datatype)
+	for dataorg in list_name:
+		x_train,y_train,x_test,y_test = load_data(dataorg, seq, mode)
+		training_process(x_train,y_train,x_test, y_test, seq, dataorg, datatype=seq+name+dataorg)
 
 	print("======================")
 	print("======================")
@@ -228,18 +219,18 @@ def main(name, mode):
 	print('Start Donor Convolution')
 
 	seq = "donor"
-	for datatype in list_name:
-		x_train,y_train,x_test,y_test = load_data(datatype, seq)
-		training_process(x_train,y_train,x_test,y_test, datatype=seq+name+datatype)
+	for dataorg in list_name:
+		x_train,y_train,x_test,y_test = load_data(dataorg, seq)
+		training_process(x_train,y_train,x_test, y_test, seq, dataorg, datatype=seq+name+dataorg)
 
 
 def app_init():
 
 	parser = argparse.ArgumentParser()
 	parser = argparse.ArgumentParser()
-	parser.add_argument("-n", "--name", type=str, required=True, help="name of convolutional model")
+	parser.add_argument("-n", "--name", type=str, required=True, help="unique output name")
 	parser.add_argument("-m", "--mode", type=str, required=True, help="balanced or imbalanced")
-	# parser.add_argument("-o", "--organism", type=str, required=True, help="dataset organism")
+	
 
 
 	args = parser.parse_args()
