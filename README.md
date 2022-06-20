@@ -52,7 +52,7 @@ For Example: `python train.py -n "output_name" -m "balanced" ` <br />
 * **Outputs**: <br />
 The outputs of training includes: <br />
 	* .h5: The deepslicer model file.
-	* .txt: A log file that contains the accuracy and evaluation metrics results.	
+	* .txt: The output files (.txt) containig the evaluation metrics results is stored in the log directory.	
                           		
                            
 **4.	Testing Usage:**
@@ -65,7 +65,7 @@ For Example: `python test.py -n "output_name" -m "balanced" ` <br />
 
 * **Outputs**: <br />
 The outputs of testing includes: <br />
-	* .txt: A log file that contains the accuracy and evaluation metrics results.
+	* .txt: The output files (.txt) containig the evaluation metrics results is stored in the log directory.
 
 
 **5.	Note:**
