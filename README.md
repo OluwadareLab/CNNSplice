@@ -27,7 +27,7 @@ CNNSplice can be run in a Docker-containerized environment locally on users comp
 To install and build TADMaster follow these steps.
 
 1. Clone this repository locally using the command `git clone https://github.com/OluwadareLab/CNNSplice.git`.
-2. Pull the TADMaster docker image from docker hub using the command `docker pull oluwadarelab/cnnsplice:latest`. This may take a few minutes. Once finished, check that the image was sucessfully pulled using `docker image ls`.
+2. Pull the CNNSplice docker image from docker hub using the command `docker pull oluwadarelab/cnnsplice:latest`. This may take a few minutes. Once finished, check that the image was sucessfully pulled using `docker image ls`.
 3. Run the CNNSplice container and mount the present working directory to the container using `docker run -v ${PWD}:${PWD}  -p 8050:8050 -it oluwadarelab/cnnsplice`.
 4. `cd` to your file directory.
 
