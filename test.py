@@ -68,7 +68,7 @@ def testing_process(x_test, y_test, seq, seq_name, name, datatype =""):
 	data_metrics = {"precision": macro_precision, "recall": macro_recall, "f1": macro_f1, "class_accuracy": class_accuracy, "accuracy": accuracy}
 	print(data_metrics)
 
-	with open(f'./logs/test_logfile_metrics_{datatype}.txt', 'w') as fl:
+	with open(f'./log/test_logfile_metrics_{datatype}.txt', 'w') as fl:
 		fl.write(str(data_metrics))
 
 
