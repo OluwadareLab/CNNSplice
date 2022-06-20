@@ -1,6 +1,9 @@
-**	Data:**
+**	Data
 -----------------------------------------------------------
-This directory contains a balanced and imbalanced folder of dataset from five carefully selected datasets from organisms namely: Homo sapiens (hs), Oryza sativa japonica (oryza), Arabidopsis thaliana (at), Drosophila melanogaster (d_mel), and Caenorhabditis elegans (c_elegans). The directory is made up of the selected organism folder with files made up of one-hot encoded genomic sequence datasets.<br /> Adenine (A) is represented by [1 0 0 0], Cytosine (C) is represented by [0 1 0 0], Guanine (G) is represented by [0 0 1 0], and Thymine (T) is represented by [0 0 0 1], with 1 denoting the location of each nucleotide in the vector set. <br /> <br />
+
+
+This directory includes the balanced and imbalanced folders from five carefully chosen datasets from organisms, including Caenorhabditis elegans (c_elegans), Arabidopsis thaliana (at), Drosophila melanogaster (d_mel), and Homo sapiens (hs). The directory is made up of the selected organism folder with files made up of one-hot encoded genomic sequence datasets. <br />
+Adenine (A) is represented by [1 0 0 0], Cytosine (C) by [0 1 0 0], Guanine (G) by [0 0 1 0], and Thymine (T) by [0 0 0 1], with 1 designating the position of each nucleotide in the vector set. <br /> <br />
 
 For Example: <br />
 	* `all_acceptor_at` is the whole dataset, `test_acceptor_at` is the test dataset, `train_acceptor_at` is the train dataset. <br />
