@@ -43,12 +43,12 @@ CNNSplice is developed in <i>Python3</i>. All dependencies are included in the D
 
 **3.	Directory and Usage:**
 ----------------------------------------------------------- 
-Usage: To use, type in the terminal `python main.py -n model_name -m mode("balanced" or "imbalanced") ` <br />
-For Testing, use `python test.py -n model_name -m mode("balanced" or "imbalanced") ` 	
+Usage: To train, type in the terminal `python main.py -n "model_name" -m mode("balanced" or "imbalanced") ` <br />
+For Testing, use `python test.py -n "model_name" -m mode("balanced" or "imbalanced") ` 	
                           		
                               
 * **Arguments**: <br />	
-	* model_name: A string to specify the name of the model <br />
+	* model_name: A string to specify a unique name of the model <br />
 	* mode: A string to specify either balanced or imbalanced input dataset<br />
 	
 
