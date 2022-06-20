@@ -220,7 +220,7 @@ def main(name, mode):
 
 	seq = "donor"
 	for dataorg in list_name:
-		x_train,y_train,x_test,y_test = load_data(dataorg, seq)
+		x_train,y_train,x_test,y_test = load_data(dataorg, seq, mode)
 		training_process(x_train,y_train,x_test, y_test, seq, dataorg, datatype=seq+name+dataorg)
 
 
