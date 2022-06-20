@@ -1,11 +1,12 @@
 # +-------------------------+-----------------------------+
 # Written By   : Akpokiro Victor
 # +-------------------------+-----------------------------+
-# Filename     : main.py
+# Filename     : train.py
 # +-------------------------+-----------------------------+
 # Description  : CNNSplice: Robust Models for Splice Site 
 #					Prediction Using 
 #					Deep Convolutional Neural Networks. 
+#		This is the training file.
 # +-------------------------+-----------------------------+
 # Company Name :  OluwadareLab UCCS
 # +-------------------------+-----------------------------+
