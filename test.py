@@ -56,7 +56,6 @@ def testing_process(x_test, y_test, seq, seq_name, name, datatype =""):
 	predict = to_categorical(predict, num_classes=2)
 	y_true = y_test
 
-	auc = roc_auc_score(y_true, model.predict_proba(x_test), multi_class='ovr')
 
 	predicted = np.argmax(prob, axis=1)
 	report = classification_report(np.argmax(y_true, axis=1), predicted, output_dict=True )
@@ -66,7 +65,7 @@ def testing_process(x_test, y_test, seq, seq_name, name, datatype =""):
 	macro_f1 = report['macro avg']['f1-score']
 	class_accuracy = report['accuracy']
 
-	data_metrics = {"auc_score": auc, "precision": macro_precision, "recall": macro_recall, "f1": macro_f1, "class_accuracy": class_accuracy, "accuracy": accuracy}
+	data_metrics = {"precision": macro_precision, "recall": macro_recall, "f1": macro_f1, "class_accuracy": class_accuracy, "accuracy": accuracy}
 	print(data_metrics)
 
 	with open(f'./logs/test_logfile_metrics_{datatype}.txt', 'w') as fl:
