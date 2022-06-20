@@ -106,17 +106,17 @@ def app_init():
 	parser.add_argument("-n", "--name", type=str, required=True, help="name of convolutional model")
 	parser.add_argument("-m", "--mode", type=str, required=True, help="balanced or imbalanced")
 	# parser.add_argument("-o", "--organism", type=str, required=True, help="dataset organism")
-	parser.add_argument("-g", "--encoded_seq", str=str, metavar='FILE', required=False, help="one-hot encoded genome sequence data file")
-	parser.add_argument("-l", "--label", str=str, metavar='FILE', required=False, help="encoded label data")
+	#parser.add_argument("-g", "--encoded_seq", str=str, metavar='FILE', required=False, help="one-hot encoded genome sequence data file")
+# 	parser.add_argument("-l", "--label", str=str, metavar='FILE', required=False, help="encoded label data")
 
 
 	args = parser.parse_args()
 	name = args.name
 	mode = args.mode
-	if args.encoded_seq:
-		file_encoded_seq = args.encoded_seq
-	if args.file_label: 
-		file_label = args.label
+# 	if args.encoded_seq:
+# 		file_encoded_seq = args.encoded_seq
+# 	if args.file_label: 
+# 		file_label = args.label
 
 	main(name)
 
