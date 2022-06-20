@@ -195,7 +195,7 @@ def training_process(x_train,y_train,x_test,y_test, seq, dataorg, datatype=''):
 	data_metrics = {"precision": macro_precision, "recall": macro_recall, "f1": macro_f1, "class_accuracy": class_accuracy, "accuracy": accuracy, "loss": loss}
 	print(data_metrics)
 
-	with open(f'./logs/file_metrics_{datatype}.txt', 'w') as fl:
+	with open(f'./log/file_metrics_{datatype}.txt', 'w') as fl:
 		fl.write(str(data_metrics))
 
 	return
