@@ -11,6 +11,10 @@
 # Company Name :  OluwadareLab UCCS
 # +-------------------------+-----------------------------+
 
+# This also contain piece of code from:
+# Wang, R et al., (2019) SpliceFinder source code [Source code]. 
+# https://github.com/deepomicslab/SpliceFinder/blob/master/SpliceFinder_sourcecode/CNN_model.py
+# +-------------------------+-----------------------------+
 
 
 
